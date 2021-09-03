@@ -28,10 +28,10 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 
     function createPair(address tokenA, address tokenB) external override returns (address pair) {
-        require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
+        require(tokenA != tokenB, 'AveswapLP: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
-        require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // single check is sufficient
+        require(token0 != address(0), 'AveswapLP: ZERO_ADDRESS');
+        require(getPair[token0][token1] == address(0), 'AveswapLP: PAIR_EXISTS'); // single check is sufficient
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
         assembly {
@@ -45,17 +45,17 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 
     function setFeeTo(address _feeTo) external override {
-        require(msg.sender == feeToSetter, 'UniswapV2: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'AveswapLP: FORBIDDEN');
         feeTo = _feeTo;
     }
 
     function setMigrator(address _migrator) external override {
-        require(msg.sender == feeToSetter, 'UniswapV2: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'AveswapLP: FORBIDDEN');
         migrator = _migrator;
     }
 
     function setFeeToSetter(address _feeToSetter) external override {
-        require(msg.sender == feeToSetter, 'UniswapV2: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'AveswapLP: FORBIDDEN');
         feeToSetter = _feeToSetter;
     }
 
