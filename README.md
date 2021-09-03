@@ -1,10 +1,10 @@
-# SushiSwap
+# Aveswap Core
 
 https://aveswap.io/
 
 ## Deployed Contracts
 
-https://dev.aveswap.io/sushiswap/contracts
+https://dev.aveswap.io/contracts
 
 ## Docs
 
