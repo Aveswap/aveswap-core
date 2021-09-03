@@ -1,4 +1,4 @@
-const { WNATIVE } = require("@sushiswap/sdk");
+const { WETH } = require("@sushiswap/sdk");
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;
@@ -11,10 +11,10 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
   if (chainId === "31337") {
     wethAddress = (await deployments.get("WETH9Mock")).address;
-  } else if (chainId in WNATIVE) {
-    wethAddress = WNATIVE[chainId].address;
+  } else if (chainId in WETH) {
+    wethAddress = WETH[chainId].address;
   } else {
-    throw Error("No WNATIVE!");
+    throw Error("No WETH!");
   }
 
   const factoryAddress = (await deployments.get("UniswapV2Factory")).address;
