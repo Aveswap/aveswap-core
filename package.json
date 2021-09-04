@@ -1,5 +1,5 @@
 {
-  "name": "@aveswap/core",
+  "name": "@aveswapio/core",
   "version": "2.0.0-canary.1",
   "license": "MIT",
   "types": "./types/index.ts",
@@ -63,7 +63,7 @@
     "@nomiclabs/hardhat-solhint": "^2.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.0",
     "@openzeppelin/contracts": "^3.1.0",
-    "@aveswap/sdk": "^4.1.1",
+    "@aveswapio/sdk": "^4.1.1",
     "@tenderly/hardhat-tenderly": "^1.0.0",
     "@typechain/ethers-v5": "^5.0.0",
     "@types/mocha": "^8.2.1",
