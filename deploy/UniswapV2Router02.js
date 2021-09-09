@@ -1,4 +1,4 @@
-const { WETH } = require("@aveswapio/sdk");
+const { WETH9_ADDRESS } = require("@aveswapio/sdk");
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;
@@ -11,10 +11,10 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
   if (chainId === "31337") {
     wethAddress = (await deployments.get("WETH9Mock")).address;
-  } else if (chainId in WNATIVE) {
-    wethAddress = WNATIVE[chainId].address;
+  } else if (chainId in WETH9_ADDRESS) {
+    wethAddress = WETH9_ADDRESS[chainId];
   } else {
-    throw Error("No WNATIVE!");
+    throw Error("No WETH9_ADDRESS!");
   }
 
   const factoryAddress = (await deployments.get("UniswapV2Factory")).address;
