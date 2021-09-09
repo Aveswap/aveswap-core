@@ -1,4 +1,4 @@
-const { WNATIVE } = require("@sushiswap/sdk");
+const { WETH } = require("@aveswapio/sdk");
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;

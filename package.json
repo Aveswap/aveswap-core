@@ -57,13 +57,13 @@
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
+    "@aveswapio/sdk": "^5.0.0-canary.56",
     "@boringcrypto/boring-solidity": "boringcrypto/BoringSolidity#e06e943",
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^2.1.0",
     "@nomiclabs/hardhat-solhint": "^2.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.0",
     "@openzeppelin/contracts": "^3.1.0",
-    "@aveswapio/sdk": "^4.1.1",
     "@tenderly/hardhat-tenderly": "^1.0.0",
     "@typechain/ethers-v5": "^5.0.0",
     "@types/mocha": "^8.2.1",
@@ -90,5 +90,8 @@
     "ts-node": "^9.1.1",
     "typechain": "^4.0.2",
     "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "eip-712": "^0.4.3"
   }
 }
