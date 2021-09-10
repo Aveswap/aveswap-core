@@ -2,6 +2,19 @@
 # yarn lockfile v1
 
 
+"@aveswapio/sdk@^5.0.0-canary.57":
+  version "5.0.0-canary.57"
+  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.57.tgz#b2088040240fd0efb06b81b583a998322cd924a9"
+  integrity sha512-ywH71Vg8xKckzAsHR2vKVkeK1LI39rW96dlmr2N53elF5ZdaIK4TeFKfUfz7co0LrwTKjj6xs7EkE8idVOxn2g==
+  dependencies:
+    big.js "^6.1.0"
+    decimal.js-light "^2.5.0"
+    isomorphic-unfetch "^3.1.0"
+    jsbi "^3.1.0"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@babel/code-frame@^7.0.0":
   version "7.14.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.14.5.tgz#23b08d740e83f49c5e59945fbf1b43e80bbf4edb"
@@ -970,19 +983,6 @@
 "@uniswap/v2-core@git://github.com/uniswap/uniswap-v2-core.git#27f6354bae6685612c182c3bc7577e61bc8717e3":
   version "1.0.0-beta.0"
   resolved "git://github.com/uniswap/uniswap-v2-core.git#27f6354bae6685612c182c3bc7577e61bc8717e3"
-
-"@aveswapio/sdk@^5.0.0-canary.67":
-  version "5.0.0-canary.67"
-  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.67.tgz#75965b3e4317f919d8efdaf7414037e6d145afdb"
-  integrity sha512-owfSxyucgNVEhF/CxI6xiNtPDC29YK+ZPX0KWBin1Wv02oWLHHUfqlzPbvO0iZsMpK7qhj/XA8k7Pe7XaFe9lg==
-  dependencies:
-    big.js "^6.1.0"
-    decimal.js-light "^2.5.0"
-    isomorphic-unfetch "^3.1.0"
-    jsbi "^3.1.0"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
 
 "@yarnpkg/lockfile@^1.1.0":
   version "1.1.0"
