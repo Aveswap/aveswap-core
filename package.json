@@ -57,7 +57,7 @@
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
-    "@aveswapio/sdk": "^5.0.0-canary.57",
+    "@aveswapio/sdk": "^5.0.0-canary.71",
     "@boringcrypto/boring-solidity": "boringcrypto/BoringSolidity#e06e943",
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^2.1.0",

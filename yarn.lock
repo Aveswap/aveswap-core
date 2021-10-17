@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@aveswapio/sdk@^5.0.0-canary.57":
-  version "5.0.0-canary.57"
-  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.57.tgz#b2088040240fd0efb06b81b583a998322cd924a9"
-  integrity sha512-ywH71Vg8xKckzAsHR2vKVkeK1LI39rW96dlmr2N53elF5ZdaIK4TeFKfUfz7co0LrwTKjj6xs7EkE8idVOxn2g==
+"@aveswapio/sdk@^5.0.0-canary.71":
+  version "5.0.0-canary.71"
+  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.71.tgz#2e12f66d3326964ffc4c0f5ffedb02f6c87e8799"
+  integrity sha512-gDjP3QVwscr4Pf5BkMLenVWqcj1ZBb/LRTYK0wDFy4HHvogMxq63ackoYfNJY9suhSEYUGIADRNmDS75oRSwlQ==
   dependencies:
     big.js "^6.1.0"
     decimal.js-light "^2.5.0"
