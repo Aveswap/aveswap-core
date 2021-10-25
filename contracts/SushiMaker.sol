@@ -5,9 +5,9 @@ pragma solidity 0.6.12;
 import "./libraries/SafeMath.sol";
 import "./libraries/SafeERC20.sol";
 
-import "./uniswapv2/interfaces/IUniswapV2ERC20.sol";
-import "./uniswapv2/interfaces/IUniswapV2Pair.sol";
-import "./uniswapv2/interfaces/IUniswapV2Factory.sol";
+import "./uniswapv2/interfaces/IAveswapV2ERC20.sol";
+import "./uniswapv2/interfaces/IAveswapV2Pair.sol";
+import "./uniswapv2/interfaces/IAveswapV2Factory.sol";
 
 import "./Ownable.sol";
 
@@ -20,7 +20,7 @@ contract SushiMaker is Ownable {
     using SafeERC20 for IERC20;
 
     // V1 - V5: OK
-    IUniswapV2Factory public immutable factory;
+    IAveswapV2Factory public immutable factory;
     //0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac
     // V1 - V5: OK
     address public immutable bar;
@@ -53,7 +53,7 @@ contract SushiMaker is Ownable {
         address _sushi,
         address _weth
     ) public {
-        factory = IUniswapV2Factory(_factory);
+        factory = IAveswapV2Factory(_factory);
         bar = _bar;
         sushi = _sushi;
         weth = _weth;
@@ -120,7 +120,7 @@ contract SushiMaker is Ownable {
     function _convert(address token0, address token1) internal {
         // Interactions
         // S1 - S4: OK
-        IUniswapV2Pair pair = IUniswapV2Pair(factory.getPair(token0, token1));
+        IAveswapV2Pair pair = IAveswapV2Pair(factory.getPair(token0, token1));
         require(address(pair) != address(0), "SushiMaker: Invalid pair");
         // balanceOf: S1 - S4: OK
         // transfer: X1 - X5: OK
@@ -227,8 +227,8 @@ contract SushiMaker is Ownable {
     ) internal returns (uint256 amountOut) {
         // Checks
         // X1 - X5: OK
-        IUniswapV2Pair pair =
-            IUniswapV2Pair(factory.getPair(fromToken, toToken));
+        IAveswapV2Pair pair =
+            IAveswapV2Pair(factory.getPair(fromToken, toToken));
         require(address(pair) != address(0), "SushiMaker: Cannot convert");
 
         // Interactions

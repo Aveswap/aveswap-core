@@ -4,8 +4,8 @@ pragma solidity 0.6.12;
 import "./libraries/SafeMath.sol";
 import "./libraries/SafeERC20.sol";
 
-import "./uniswapv2/interfaces/IUniswapV2Pair.sol";
-import "./uniswapv2/interfaces/IUniswapV2Factory.sol";
+import "./uniswapv2/interfaces/IAveswapV2Pair.sol";
+import "./uniswapv2/interfaces/IAveswapV2Factory.sol";
 
 import "./Ownable.sol";
 
@@ -32,7 +32,7 @@ contract SushiMakerKashi is Ownable {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IUniswapV2Factory private immutable factory;
+    IAveswapV2Factory private immutable factory;
     //0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac
     address private immutable bar;
     //0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272
@@ -57,7 +57,7 @@ contract SushiMakerKashi is Ownable {
     );
 
     constructor(
-        IUniswapV2Factory _factory,
+        IAveswapV2Factory _factory,
         address _bar,
         IBentoBoxWithdraw _bentoBox,
         address _sushi,
@@ -142,8 +142,8 @@ contract SushiMakerKashi is Ownable {
         address to
     ) private returns (uint256 amountOut) {
         (address token0, address token1) = fromToken < toToken ? (fromToken, toToken) : (toToken, fromToken);
-        IUniswapV2Pair pair =
-            IUniswapV2Pair(
+        IAveswapV2Pair pair =
+            IAveswapV2Pair(
                 uint256(
                     keccak256(abi.encodePacked(hex"ff", factory, keccak256(abi.encodePacked(token0, token1)), pairCodeHash))
                 )

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.6.12;
+pragma solidity 0.5.16;
 
-import "../uniswapv2/UniswapV2Factory.sol";
+import "../uniswapv2/AveswapV2Factory.sol";
 
-contract SushiSwapFactoryMock is UniswapV2Factory {
-    constructor(address _feeToSetter) public UniswapV2Factory(_feeToSetter) {}
+contract SushiSwapFactoryMock is AveswapV2Factory {
+    constructor(address _feeToSetter) public AveswapV2Factory(_feeToSetter) {}
 }
